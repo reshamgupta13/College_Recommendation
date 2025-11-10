@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>College</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style1.css" rel="stylesheet">
+</head>
+<style>
+  .search {
+      width: 200px;
+      border-radius: 5px;
+    }
+   .search button {
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left:50px;
+    }
+    .search button:hover {
+      background: #e2e7eb;
+      color:black;
+    }
+</style>
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-cente">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="logo me-auto me-lg-0"><a href="home.html">Colleges</a></h1>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="home.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="Courses.html">All Courses</a></li>
+          <li><a class="nav-link scrollto" href="btech.html">B.Tech</a></li>
+          <li><a class="nav-link scrollto" href="bca.html">B.C.A</a></li>
+          <li><a class="nav-link scrollto" href="bba.html">B.B.A.</a></li>
+          <li><a class="nav-link scrollto" href="CR.html">Review</a></li>
+          <li><a class="nav-link scrollto" href="Contact.html">Contact</a></li>
+          <li><a class="nav-link scrollto" href="Filter.html">Filter</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    <form action="recommend.php" method="POST">
+    <div class="search ">
+    <input type="text" name="search" placeholder="Search by name, course, or location" required>
+    <button type="submit">🔍 Search</button>
+    </div>
+    </form>
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+      <div class="row">
+        <div class="col-lg-8">
+          <h1>Welcome to <span>College</span></h1>
+          
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                    <img src="assets\img\C\13.webp" class="d-block w-100" alt="..." style="height:400px;">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets\img\C\1.jpg" class="d-block w-100" alt="..." style="height:400px;">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets\img\C\6.webp" class="d-block w-100" alt="..." style="height:400px;">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets\img\C\15.webp" class="d-block w-100" alt="..." style="height:400px;">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets\img\C\9.jpg" class="d-block w-100" alt="..." style="height:400px;">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets\img\C\16.png" class="d-block w-100" alt="..." style="height:400px;">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
+     </div>
+        </div>
+        <div class="col-lg-2 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
+          <a href="https://www.youtube." class="glightbox play-btn"></a>
+            </div>
+        <div class="btns col-lg-2 d-flex align-items-center justify-content-center position-relative">
+            <a href="Admin.html" class="btn-alogin animated fadeInUp scrollto">Admin Login</a>
+            <a href="Student login.html" class="btn-slogin animated fadeInUp scrollto">Student Login</a>
+        </div>
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+            <div class="about-img">
+              <img src="assets\img\C\12.jpg" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h3>College Portal provident for Good Choice </h3>
+            <p class="fst-italic">
+              
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i>Colleges serve as vital institutions that foster personal growth, critical thinking, and professional development.
+                 With a focus on both intellectual and social development, colleges play a crucial role in preparing individuals to navigate the complexities of the modern world and contribute meaningfully to society.</li>
+              <li><i class="bi bi-check-circle"></i>They provide students with the opportunity to explore diverse fields of study, engage with a variety of perspectives, and develop essential skills for the workforce. </li>
+              <li><i class="bi bi-check-circle"></i>Beyond academics, colleges often promote a vibrant campus life, encouraging participation in clubs, organizations, and community service, which enriches the educational experience and builds lifelong friendships. 
+              </li>
+            </ul>
+            <p>
+          
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+        <!-- ======= Why Us Section ======= -->
+        <section id="why-us" class="why-us">
+          <div class="container" data-aos="fade-up">
+    
+            <div class="section-title">
+              <h2>Why Us</h2>
+              <p>Why Choose The Better Collage ?</p>
+            </div>
+    
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="box" data-aos="zoom-in" data-aos-delay="100">
+                  <span> Academic Reputation</span>
+                  <p>Top colleges often have strong academic programs, distinguished faculty, and a rigorous curriculum that can enhance your learning experience and prepare you for your career.</p>
+                </div>
+              </div>
+              <div class="col-lg-4 mt-4 mt-lg-0">
+                <div class="box" data-aos="zoom-in" data-aos-delay="200">
+                  <span>Career Opportunities</span>
+                  <p>Graduating from a well-regarded institution can improve your job prospects. Employers often recognize the reputation of certain colleges and may prioritize candidates from those schools.</p>
+                </div>
+              </div>
+              <div class="col-lg-4 mt-4 mt-lg-0">
+                <div class="box" data-aos="zoom-in" data-aos-delay="300">
+                  <span>Resources and Facilities</span>
+                  <p>The best colleges typically offer superior resources, including libraries, laboratories, and technology, which can enrich your education and research opportunities.</p>
+                </div>
+              </div>
+            </div><br>
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="box" data-aos="zoom-in" data-aos-delay="100">
+                  <span>Networking</span><br>
+                  <p> The connections you make in college can be invaluable. Attending a prestigious institution often provides access to a robust alumni network that can help with internships and job placements.</p>
+                </div>
+              </div>
+              <div class="col-lg-4 mt-4 mt-lg-0">
+                <div class="box" data-aos="zoom-in" data-aos-delay="200">
+                  <span>Location and Environment</span>
+                  <p>The best college for you may also be one that fits your lifestyle and preferences, whether that’s a bustling urban campus or a quieter, rural setting.</p>
+                </div>
+              </div>
+              <div class="col-lg-4 mt-4 mt-lg-0">
+                <div class="box" data-aos="zoom-in" data-aos-delay="300">
+                  <span>Extracurricular Activities</span>
+                  <p>Many top colleges provide a wide range of extracurricular options, from clubs and organizations to sports and arts programs, helping you develop skills and interests outside of academics.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section><!-- End Why Us Section -->
+
+                <!-- ======= Course Section ======= -->
+    <section id="menu" class="menu section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Courses</h2>
+          <h1 style="margin-top:50px; font-size: 50px; color:rgb(16, 16, 16);">Checking Out The Demanding Courses</h1>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="menu-flters">
+              <li data-filter=".filter-UG">UG</li>
+              <li data-filter=".filter-starters">B-Tech.</li>
+              <li data-filter=".filter-salads">B.B.A.</li>
+              <li data-filter=".filter-specialty">B.C.A.</li>
+            </ul>
+          </div>
+        </div>
+        <!--UG-->
+        <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 menu-item filter-UG">
+            <!--<img src="assets/img/menu/lobster-bisque.jpg" class="menu-img" alt="">-->
+             <div>
+               <h5 style="text-align:center;"><a href="btech.html">Bachelor of Technology</a></h5>
+             </div>
+           </div>
+ 
+           <div class="col-lg-4 menu-item filter-UG">
+             <div>
+               <h5 style="text-align:center;"><a href="bba.html">Bachelor of Buissenss Administrator</a></h5>
+             </div>
+           </div>
+ 
+           <div class="col-lg-4 menu-item filter-UG">
+             <div>
+               <h5 style="text-align:center;"><a href="bca.html">Bachelor of Computer Applications</a></h5>
+             </div>
+           </div>
+             <!--Btech-->
+          <div class="col-lg-4 menu-item filter-starters">
+           <!--<img src="assets/img/menu/lobster-bisque.jpg" class="menu-img" alt="">-->
+            <div>
+              <h5 style="text-align:center;"><a href="btech.html #CE">Civil Engineering</a></h5>
+            </div>
+          </div>
+
+          <div class="col-lg-4 menu-item filter-starters">
+            <div>
+              <h5 style="text-align:center;"><a href="btech.html #CS">Computer Science And Engineering</a></h5>
+              </h5>
+            </div>
+          </div>
+
+          <div class="col-lg-4 menu-item filter-starters">
+            <div>
+              <h5 style="text-align:center;"><a href="btech.html #EE">Electrical & Electronics Engineering</a></h5>
+            </div>
+          </div>
+
+          <div class="col-lg-4 menu-item filter-starters">
+            <div>
+              <h5 style="text-align:center;"><a href="btech.html #IT">Information Technology</a></h5>
+            </div>
+          </div>
+
+          <div class="col-lg-4 menu-item filter-starters">
+            <div>
+              <h5 style="text-align:center;"><a href="btech.html #ME">Mechanical Engineering</a></h5>
+            </div>
+          </div>
+
+          <div class="col-lg-4 menu-item filter-starters">
+            <div>
+              <h5 style="text-align:center;"><a href="btech.html #EC">Electronics & Communication Engineering</a></h5>
+            </div>
+          </div>
+           <!--BBA-->
+          <div class="col-lg-4 menu-item filter-salads">
+            <div>
+              <h5 style="text-align:center;"><a href="bba.html">Accounting</a></h5>
+            </div>
+          </div>
+
+          <div class="col-lg-4 menu-item filter-salads">
+            <div>
+              <h5 style="text-align:center;"><a href="bba.html">Human Resources</a></h5>
+            </div>
+          </div>
+           
+          <div class="col-lg-4 menu-item filter-salads">
+            <div>
+              <h5 style="text-align:center;"><a href="bba.html">Hospitality</a></h5>
+            </div>
+          </div>
+          <div class="col-lg-4 menu-item filter-salads">
+            <div>
+              <h5 style="text-align:center;"><a href="bba.html">Marketing</a></h5>
+            </div>
+          </div>
+          <div class="col-lg-4 menu-item filter-salads">
+            <div>
+              <h5 style="text-align:center;"><a href="bba.html">Bussiness Analytics</a></h5>
+            </div>
+          </div>
+          <div class="col-lg-4 menu-item filter-salads">
+            <div>
+              <h5 style="text-align:center;"><a href="bba.html">Inverstment Banking</a></h5>
+            </div>
+          </div>
+            <!--BCA-->
+          <div class="col-lg-4 menu-item filter-specialty">
+            <div>
+              <h5 style="text-align:center;"><a href="bca.html">Information Technology</a></h5>
+            </div>
+          </div>
+
+          <div class="col-lg-4 menu-item filter-specialty">
+            <div>
+              <h5 style="text-align:center;"><a href="bca.html">Computer Graphics</a></h5>
+            </div>
+          </div>
+
+          <div class="col-lg-4 menu-item filter-specialty">
+            <div>
+              <h5 style="text-align:center;"><a href="bca.html">Software Applications Architecture</a></h5>
+            </div>
+          </div>
+          <div class="col-lg-4 menu-item filter-specialty">
+            <div>
+              <h5 style="text-align:center;"><a href="bca.html">Web Designs</a></h5>
+            </div>
+          </div>
+          <div class="col-lg-4 menu-item filter-specialty">
+            <div>
+              <h5 style="text-align:center;"><a href="bca.html">Internet Technologies</a></h5>
+            </div>
+          </div>
+          <div class="col-lg-4 menu-item filter-specialty">
+            <div>
+              <h5 style="text-align:center;"><a href="bca.html">Database Management System</a></h5>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Courses Section --> 
+    
+<!-- ======= Ranking Section ======= -->
+<section id="specials" class="specials">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>Ranking</h2>
+      <p>College Ranking Based On</p>
+    </div>
+
+    <div class="row" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-3">
+        <ul class="nav nav-tabs flex-column">
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-1">NIRF Ranking</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-2">AICTE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-3">NAAC Ranking</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link active show" data-bs-toggle="tab" href="#tab-4">Autonomus</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-9 mt-4 mt-lg-0">
+        <div class="tab-content">
+          <div class="tab-pane active show" id="tab-4">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>Autonomus</h3>
+               <ul>
+                <li><a href="https://www.niet.co.in/">Noida Institute of Engineering and Technology, Greater Noida</a></li>
+               </ul>
+              </div>
+              
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-1">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>NIRF Ranking</h3>
+                <ul>
+                                    <li><a href="https://www.mangalmay.org/">Mangalmay Institute of Management and Technology, Greater Noida</a></li> <em style="color:red;">#218<sup>th</sup>/762 for B.Tech</em></a></li>
+                  <li><a href="https://www.glbitm.org/">GLBITM, Greater Noida <em style="color:red;">#136<sup>th</sup>/762 for B.Tech</em></a></li>
+                  <li><a href="https://www.iimtindia.net/">IIMT College of Management, Greater Noida <em style="color:red;">#140<sup>th</sup>/175 for B.Tech</em></a></li>
+                  <li><a href="https://www.gniotgroup.edu.in/">GNIOT Group Of Institute, Greater Noida <em style="color:red;">#393<sup>th</sup>/762 for B.Tech</em></a></li>
+                  <li><a href="https://galgotiacollege.edu/">GCET, Greater Noida<em style="color:red;">#145<sup>th</sup>/762 for B.Tech</em></a></li>
+                  <li><a href="https://www.niet.co.in/">NIET, Greater Noida <em style="color:red;">#395<sup>th</sup>/762 for B.Tech</em></a></li>
+                  <li><a href="https://liet.in/">Lloyd Engineering College, Greater Noida  <em style="color:red;">-</em></a></li>
+                  <li><a href="https://www.kccitm.edu.in/">Kcc institute of technology and management, Greater Noida <em style="color:red;">-</em></a></li>
+                 </ul>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-2">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>AICTE Approved</h3>
+                <ul>
+                  
+                  <li><a href="https://www.mangalmay.org/">Mangalmay Institute of Management and Technology, Greater Noida </a><em style="color:red;">AICTE Approved</em></li>
+                  <li><a href="https://www.glbitm.org/">GLBITM, Greater Noida </a><em style="color:red;"> AICTE Approved</em></li>
+                  <li><a href="https://www.iimtindia.net/">IIMT College of Management, Greater Noida</a><em style="color:red;"> AICTE Approved</em></li>
+                  <li><a href="https://www.gniotgroup.edu.in/">GNIOT Group Of Institute, Greater Noida</a><em style="color:red;"> AICTE Approved</em></li>
+                  <li><a href="https://galgotiacollege.edu/">GCET, Greater Noida</a><em style="color:red;"> AICTE Approved</em></li>
+                  <li><a href="https://www.niet.co.in/">NIET, Greater Noida</a><em style="color:red;"> AICTE Approved</em></li>
+                  <li><a href="https://liet.in/">Lloyd Engineering College, Greater Noida</a><em style="color:red;"> AICTE Approved</em></li>
+                   <li><a href="https://www.kccitm.edu.in/">Kcc institute of technology and management, Greater Noida<em style="color:red;"> AICTE Approved</em></li>
+                 </ul>
+               </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-3">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>NAAC Ranking</h3>
+                <ul>
+                  
+                  <li><a href="https://www.mangalmay.org/">Mangalmay Institute of Management and Technology, Greater Noida </a><em style="color:red;">Accredited with NAAC A+</em></li>
+                  <li><a href="https://www.glbitm.org/">GLBITM, Greater Noida </a><em style="color:red;">Accredited with NAAC A+</em></li>
+                  <li><a href="https://www.iimtindia.net/">IIMT College of Management, Greater Noida</a><em style="color:red;"> Accredited with NAAC B++</em></li>
+                  <li><a href="https://www.gniotgroup.edu.in/">GNIOT Group Of Institute, Greater Noida</a><em style="color:red;"> Accredited with NAAC A+</em></li>
+                  <li><a href="https://galgotiacollege.edu/">GCET, Greater Noida</a><em style="color:red;"> Accredited with NAAC A+</em></li>
+                  <li><a href="https://www.niet.co.in/">NIET, Greater Noida</a><em style="color:red;"> Accredited with NAAC A 3.23</em></li>
+                  <li><a href="https://liet.in/">Lloyd Engineering College, Greater Noida</a><em style="color:red;"> -</em></li>
+                 <li><a href="https://www.kccitm.edu.in/">Kcc institute of technology and management, Greater Noida</a><em style="color:red;"> -</em></li>
+                 </ul>
+               </div>
+            </div>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End Ranking Section -->
+    
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact">
+          <div class="container" data-aos="fade-up">
+    
+            <div class="section-title">
+              <h2>Contact</h2>
+              <p>Contact Us</p>
+            </div>
+          </div>
+    
+          <div data-aos="fade-up">
+            <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed/v1/place?q=Greater+Noida&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" frameborder="0" allowfullscreen></iframe>
+          </div>
+    
+          <div class="container" data-aos="fade-up">
+    
+            <div class="row mt-5">
+    
+              <div class="col-lg-4">
+                <div class="info">
+                  <div class="address">
+                    <i class="bi bi-geo-alt"></i>
+                    <h4>Location:</h4>
+                    <p>Greater Noida</p>
+                  </div>
+    
+                  <div class="open-hours">
+                    <i class="bi bi-clock"></i>
+                    <h4>Open Hours:</h4>
+                    <p>
+                      Monday-Saturday:<br>
+                      11:00 AM - 5:00 PM
+                    </p>
+                  </div>
+    
+                  <div class="email">
+                    <i class="bi bi-envelope"></i>
+                    <h4>Email:</h4>
+                    <p>info@example.com</p>
+                  </div>
+    
+                  <div class="phone">
+                    <i class="bi bi-phone"></i>
+                    <h4>Call:</h4>
+                    <p>+91 ----------</p>
+                  </div>
+    
+                </div>
+    
+              </div>
+    
+              <div class="col-lg-8 mt-5 mt-lg-0">
+    
+                <form action="contact.php" method="post" role="form" class="php-email-form">
+                  <div class="row">
+                    <div class="col-md-6 form-group">
+                      <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="col-md-6 form-group mt-3 mt-md-0">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                    </div>
+                  </div>
+                  <div class="form-group mt-3">
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                  </div>
+                  <div class="form-group mt-3">
+                    <textarea class="form-control" name="message" rows="8" placeholder="Message" required></textarea>
+                  </div>
+                  <div class="my-3">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                  </div>
+                  <div class="text-center"><button type="submit">Send Message</button></div>
+                </form>
+    
+              </div>
+    
+            </div>
+    
+          </div>
+        </section><!-- End Contact Section -->
+    
+      </main><!-- End #main -->
+    
+      <!-- ======= Footer ======= -->
+      <footer id="footer">
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+    
+              <div class="col-lg-6 col-md-6">
+                <div class="footer-info">
+                  <h3>College Recommendation</h3>
+                  <p>
+                    Greater Noida <br>
+                    U.P., INDIA<br><br>
+                    <strong>Phone:</strong> +91 --------<br>
+                    <strong>Email:</strong> info@example.com<br>
+                  </p>
+                  <div class="social-links mt-3">
+                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-lg-6 col-md-6 footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="container">
+          <div class="copyright">
+            &copy; Copyright <strong><span>XYZ</span></strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+
+            Designed by <a href="">OUR TEAM</a>
+          </div>
+        </div>
+      </footer><!-- End Footer -->
+    
+      <div id="preloader"></div>
+      <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    
+      <!-- Vendor JS Files -->
+      <script src="assets/vendor/aos/aos.js"></script>
+      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+      <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+      <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+      <script src="assets/vendor/php-email-form/validate.js"></script>
+    
+      <!-- Template Main JS File -->
+      <script src="assets/js/main.js"></script>
+    
+    </body>
+    
+    </html>

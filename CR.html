@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>College</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style1.css" rel="stylesheet">
+</head>
+<style>
+  .search {
+      width: 200px;
+      border-radius: 5px;
+    }
+   .search button {
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left:50px;
+    }
+    .search button:hover {
+      background: #e2e7eb;
+      color:black;
+    }
+</style>
+
+<body>
+  
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-cente">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="logo me-auto me-lg-0"><a href="home.html">Colleges</a></h1>
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="home.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="Courses.html">All Courses</a></li>
+          <li><a class="nav-link scrollto" href="btech.html">B.Tech</a></li>
+          <li><a class="nav-link scrollto" href="bca.html">B.C.A</a></li>
+          <li><a class="nav-link scrollto" href="bba.html">B.B.A.</a></li>
+          <li><a class="nav-link scrollto" href="CR.html">Review</a></li>
+          <li><a class="nav-link scrollto" href="Contact.html">Contact</a></li>
+          <li><a class="nav-link scrollto" href="Filter.html">Filter</a></li>
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+      <form action="recommend.php" method="POST">
+    <div class="search ">
+    <input type="text" name="search" placeholder="Search by name, course, or location" required>
+    <button type="submit">🔍 Search</button>
+    </div>
+    </form>
+
+    </div>
+  </header><!-- End Header -->
+
+    <br><br><div class="container">
+        <div class="college-list">
+            <br><br> <h2>Select a College For Review</h2>
+            <ul id="college-list">
+               <li><a href="#" onclick="selectCollege('Mangalmay Institute of Management and Technology, Greater Noida')">Mangalmay Institute of Management and Technology, Greater Noida</a></li>
+                <li><a href="#" onclick="selectCollege('GL Bajaj Institute & Technology Management, Greater Noida')">GL Bajaj Institute & Technology Management, Greater Noida</a></li>
+                <li><a href="#" onclick="selectCollege('IIMT College of Management, Greater Noida')">IIMT College of Management, Greater Noida</a></li>
+                <li><a href="#" onclick="selectCollege('GNIOT Group Of Institute, Greater Noida')">GNIOT Group Of Institute, Greater Noida</a></li>
+                <li><a href="#" onclick="selectCollege('Galgotias College of Engineering & Technology, Greater Noida')">Galgotias College of Engineering & Technology, Greater Noida</a></li>
+                <li><a href="#" onclick="selectCollege('Noida Institute of Engineering and Technology, Greater Noida')">Noida Institute of Engineering and Technology, Greater Noida</a></li>
+                <li><a href="#" onclick="selectCollege('Lloyd Engineering College, Greater Noida')">Lloyd Engineering College, Greater Noida</a></li>
+            </ul>
+        </div>
+        <div class="review-form" id="review-form" style="display: none;">
+            <br><br><h4>Submit Your Review for <span id="selected-college"></span></h4>
+            <form id="reviewSubmitForm">
+                <label for="rating">Rating (1-5):</label>
+                <input type="number" id="rating" min="1" max="5" required>
+
+                <label for="reviewText">Your Review:</label>
+                <textarea id="reviewText" rows="4" required></textarea>
+
+                <button type="submit">Submit Review</button>
+            </form>
+        </div>
+        <div class="reviews">
+            <h2>Reviews for <span id="review-heading"></span></h2>
+            <div id="reviews-display">
+            </div>
+        </div>
+    </div>
+    <script>
+let selectedCollege = "";
+let collegeReviews = {};
+
+// Function to select a college
+function selectCollege(collegeName) {
+    selectedCollege = collegeName;
+    document.getElementById("selected-college").textContent = selectedCollege;
+    document.getElementById("review-heading").textContent = selectedCollege;
+    document.getElementById("review-form").style.display = "block";
+    displayReviews();
+}
+
+// Function to handle form submission
+document.getElementById("reviewSubmitForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const rating = document.getElementById("rating").value;
+    const reviewText = document.getElementById("reviewText").value;
+
+    if (!collegeReviews[selectedCollege]) {
+        collegeReviews[selectedCollege] = [];
+    }
+
+    // Save the review
+    collegeReviews[selectedCollege].push({
+        rating: rating,
+        reviewText: reviewText
+    });
+
+    // Clear the form fields
+    document.getElementById("rating").value = '';
+    document.getElementById("reviewText").value = '';
+
+    // Display the updated reviews
+    displayReviews();
+});
+
+// Function to display reviews for the selected college
+function displayReviews() {
+    const reviewsContainer = document.getElementById("reviews-display");
+    reviewsContainer.innerHTML = ''; // Clear previous reviews
+
+    if (!collegeReviews[selectedCollege] || collegeReviews[selectedCollege].length === 0) {
+        reviewsContainer.innerHTML = "<p>No reviews yet. Be the first to review!</p>";
+        return;
+    }
+
+    collegeReviews[selectedCollege].forEach((review, index) => {
+        const reviewElement = document.createElement("div");
+        reviewElement.classList.add("review-item");
+
+        reviewElement.innerHTML = `
+            <span>Rating: ${review.rating}</span>
+            <p>${review.reviewText}</p>
+        `;
+
+        reviewsContainer.appendChild(reviewElement);
+    });
+}
+</script>
+    
+      <!-- ======= Footer ======= -->
+      <footer id="footer">
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+    
+              <div class="col-lg-6 col-md-6">
+                <div class="footer-info">
+                  <h3>College Recommendation</h3>
+                  <p>
+                    Greater Noida <br>
+                    U.P., INDIA<br><br>
+                    <strong>Phone:</strong> +91 --------<br>
+                    <strong>Email:</strong> info@example.com<br>
+                  </p>
+                  <div class="social-links mt-3">
+                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-lg-6 col-md-6 footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="container">
+          <div class="copyright">
+            &copy; Copyright <strong><span>XYZ</span></strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+
+            Designed by <a href="">OUR TEAM</a>
+          </div>
+        </div>
+      </footer><!-- End Footer -->
+    
+      <div id="preloader"></div>
+      <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    
+      <!-- Vendor JS Files -->
+      <script src="assets/vendor/aos/aos.js"></script>
+      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+      <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+      <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+      <script src="assets/vendor/php-email-form/validate.js"></script>
+    
+      <!-- Template Main JS File -->
+      <script src="assets/js/main.js"></script>
+    
+    </body>
+    
+    </html>
